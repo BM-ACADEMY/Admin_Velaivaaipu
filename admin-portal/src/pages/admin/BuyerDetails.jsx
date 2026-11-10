@@ -10,6 +10,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import PlanBenefitsEditor from '@/components/admin/PlanBenefitsEditor';
 
 const featureLabels = {
   // Jobseeker
@@ -416,6 +417,9 @@ const BuyerDetails = () => {
 
         {/* Payment History timeline / list */}
         <div className="lg:col-span-2 space-y-6">
+          {/* Change this one person's plan benefits and end date (counts, switches, validity). */}
+          <PlanBenefitsEditor userId={user._id || id} />
+
           <div className="bg-white border border-slate-100 rounded-[24px] overflow-hidden shadow-sm shadow-slate-200/50">
             <div className="p-6 border-b border-slate-50 flex items-center justify-between">
               <div>
